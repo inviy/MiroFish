@@ -36,9 +36,9 @@ def main():
     # 创建应用
     app = create_app()
     
-    # 获取运行配置
+    # 获取运行配置 (PORT is auto-injected by Railway)
     host = os.environ.get('FLASK_HOST', '0.0.0.0')
-    port = int(os.environ.get('FLASK_PORT', 5001))
+    port = int(os.environ.get('PORT', os.environ.get('FLASK_PORT', 5001)))
     debug = Config.DEBUG
     
     # 启动服务
