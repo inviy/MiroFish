@@ -15,4 +15,4 @@ COPY backend/ ./backend/
 
 WORKDIR /app/backend
 
-CMD ["bash", "-c", "echo '=== ALL ENV VARS ===' && printenv | sort && echo '==================' && python run.py"]
+CMD ["python", "run.py"]
