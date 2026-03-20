@@ -11,10 +11,9 @@ from dotenv import load_dotenv
 project_root_env = os.path.join(os.path.dirname(__file__), '../../.env')
 
 if os.path.exists(project_root_env):
+    # Local dev: load .env file (override=True so .env takes priority)
     load_dotenv(project_root_env, override=True)
-else:
-    # 如果根目录没有 .env，尝试加载环境变量（用于生产环境）
-    load_dotenv(override=True)
+# Production (Railway/Docker): env vars are already injected, do NOT call load_dotenv
 
 
 class Config:
