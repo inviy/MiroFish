@@ -1,0 +1,25 @@
+# =============================================
+# MiroFish Production Requirements (Railway)
+# camel-ai/camel-oasis excluded (8GB+ with torch)
+# Simulation runs as separate process via OASIS CLI
+# =============================================
+
+# Core framework
+flask>=3.0.0
+flask-cors>=6.0.0
+
+# LLM (OpenAI-compatible)
+openai>=1.0.0
+
+# Zep Cloud (knowledge graph)
+zep-cloud==3.13.0
+
+# File parsing
+PyMuPDF>=1.24.0
+charset-normalizer>=3.0.0
+chardet>=5.0.0
+
+# Utils
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+requests>=2.31.0
