@@ -15,4 +15,4 @@ COPY backend/ ./backend/
 
 WORKDIR /app/backend
 
-CMD ["bash", "-c", "echo '=== ENV CHECK ===' && echo LLM_API_KEY=${LLM_API_KEY:0:10}... && echo ZEP_API_KEY=${ZEP_API_KEY:0:10}... && python run.py"]
+CMD ["bash", "-c", "echo '=== ALL ENV VARS ===' && printenv | sort && echo '==================' && python run.py"]
